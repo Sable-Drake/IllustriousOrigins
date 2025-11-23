@@ -1,0 +1,13 @@
+{
+	"masterVersionFile":"https://raw.githubusercontent.com/Sable-Drake/IllustriousOrigins/main/illustriousorigins.version",
+	"modName":"Illustrious Origins",
+	"modVersion":
+	{
+		"major":1,
+		"minor":0,
+		"patch":0
+	},
+	"starsectorVersion":"0.98a-RC8",
+	"directDownloadURL":"https://github.com/Sable-Drake/IllustriousOrigins/releases/download/1.0.0/IllustriousOrigins-1.0.0.zip"
+}
+
