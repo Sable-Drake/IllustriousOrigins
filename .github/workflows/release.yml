@@ -40,7 +40,7 @@ jobs:
         echo 'data["version"] = version' >> update_version.py
         echo 'with open("mod_info.json", "w") as f:' >> update_version.py
         echo '    json.dump(data, f, indent=4)' >> update_version.py
-        echo 'print(f"Updated mod_info.json version to: {version}")' >> update_version.py
+        echo 'print("Updated mod_info.json version to: " + version)' >> update_version.py
         python3 update_version.py
         cat mod_info.json
         
@@ -57,7 +57,7 @@ jobs:
         echo 'major = int(os.environ["MAJOR"])' >> update_version_file.py
         echo 'minor = int(os.environ["MINOR"])' >> update_version_file.py
         echo 'patch = os.environ["PATCH"]' >> update_version_file.py
-        echo 'download_url = f"https://github.com/Sable-Drake/IllustriousOrigins/releases/download/{version}/IllustriousOrigins-{version}.zip"' >> update_version_file.py
+        echo 'download_url = "https://github.com/Sable-Drake/IllustriousOrigins/releases/download/" + version + "/IllustriousOrigins-" + version + ".zip"' >> update_version_file.py
         echo 'try:' >> update_version_file.py
         echo '    patch_int = int(patch)' >> update_version_file.py
         echo 'except ValueError:' >> update_version_file.py
@@ -72,9 +72,9 @@ jobs:
         echo 'data["directDownloadURL"] = download_url' >> update_version_file.py
         echo 'with open("illustriousorigins.version", "w") as f:' >> update_version_file.py
         echo '    json.dump(data, f, indent="\t")' >> update_version_file.py
-        echo 'print(f"Updated illustriousorigins.version:")' >> update_version_file.py
-        echo 'print(f"  Version: {major}.{minor}.{patch}")' >> update_version_file.py
-        echo 'print(f"  Download URL: {download_url}")' >> update_version_file.py
+        echo 'print("Updated illustriousorigins.version:")' >> update_version_file.py
+        echo 'print("  Version: " + str(major) + "." + str(minor) + "." + str(patch))' >> update_version_file.py
+        echo 'print("  Download URL: " + download_url)' >> update_version_file.py
         python3 update_version_file.py
         cat illustriousorigins.version
         
