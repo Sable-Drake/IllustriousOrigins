@@ -1,0 +1,16 @@
+{
+    "id": "illustriousorigins",
+    "name": "Illustrious Origins",
+    "author": "SableDrake",
+    "version": "1.0.0",
+    "description": "Adds new character backgrounds for Nexerelin with unique gameplay effects. Currently includes 'Force of Personality' - a background that gradually improves relations between factions aligned with you, making alliances permanent and allowing any faction to join regardless of alignment compatibility.",
+    "gameVersion": "0.98a-RC8",
+    "dependencies": [
+        {
+            "id": "nexerelin",
+            "name": "Nexerelin"
+        }
+    ],
+    "modPlugin": "data.scripts.IllustriousOriginsModPlugin"
+}
+

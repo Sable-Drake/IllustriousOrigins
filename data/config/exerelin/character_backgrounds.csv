@@ -1,0 +1,3 @@
+id,name,shortDescription,longDescription,order,iconPath,plugin
+force_of_personality,Force of Personality,"Your magnetic personality draws factions together, making them believe in a shared vision of the future.","Those who align themselves with you find themselves drawn together by a shared vision. Factions that trust you gradually put aside their historical differences, finding common ground they never knew existed. Alliances formed under your leadership become unbreakable bonds, and even those not yet fully committed begin to see the wisdom in cooperation.",100,graphics/icons/intel/reputation.png,data.scripts.campaign.backgrounds.ForceOfPersonalityBackground
+

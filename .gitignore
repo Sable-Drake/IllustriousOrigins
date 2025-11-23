@@ -1,0 +1,40 @@
+# Compiled class files
+*.class
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Starsector specific
+*.log
+*.tmp
+
+# Build artifacts
+bin/
+out/
+build/
+dist/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# NetBeans
+nbproject/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
