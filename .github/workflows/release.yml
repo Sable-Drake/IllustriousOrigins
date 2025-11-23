@@ -51,38 +51,31 @@ jobs:
         MINOR: ${{ steps.get_version.outputs.minor }}
         PATCH: ${{ steps.get_version.outputs.patch }}
       run: |
-        python3 << 'PYEOF'
-import json
-import os
-
-version = os.environ['VERSION']
-major = int(os.environ['MAJOR'])
-minor = int(os.environ['MINOR'])
-patch = os.environ['PATCH']
-download_url = f"https://github.com/Sable-Drake/IllustriousOrigins/releases/download/{version}/IllustriousOrigins-{version}.zip"
-
-try:
-    patch_int = int(patch)
-except ValueError:
-    patch_int = patch
-
-with open('illustriousorigins.version', 'r') as f:
-    data = json.load(f)
-
-data['modVersion'] = {
-    'major': major,
-    'minor': minor,
-    'patch': patch_int
-}
-data['directDownloadURL'] = download_url
-
-with open('illustriousorigins.version', 'w') as f:
-    json.dump(data, f, indent='\t')
-    
-print(f"Updated illustriousorigins.version:")
-print(f"  Version: {major}.{minor}.{patch}")
-print(f"  Download URL: {download_url}")
-PYEOF
+        echo 'import json' > update_version_file.py
+        echo 'import os' >> update_version_file.py
+        echo 'version = os.environ["VERSION"]' >> update_version_file.py
+        echo 'major = int(os.environ["MAJOR"])' >> update_version_file.py
+        echo 'minor = int(os.environ["MINOR"])' >> update_version_file.py
+        echo 'patch = os.environ["PATCH"]' >> update_version_file.py
+        echo 'download_url = f"https://github.com/Sable-Drake/IllustriousOrigins/releases/download/{version}/IllustriousOrigins-{version}.zip"' >> update_version_file.py
+        echo 'try:' >> update_version_file.py
+        echo '    patch_int = int(patch)' >> update_version_file.py
+        echo 'except ValueError:' >> update_version_file.py
+        echo '    patch_int = patch' >> update_version_file.py
+        echo 'with open("illustriousorigins.version", "r") as f:' >> update_version_file.py
+        echo '    data = json.load(f)' >> update_version_file.py
+        echo 'data["modVersion"] = {' >> update_version_file.py
+        echo '    "major": major,' >> update_version_file.py
+        echo '    "minor": minor,' >> update_version_file.py
+        echo '    "patch": patch_int' >> update_version_file.py
+        echo '}' >> update_version_file.py
+        echo 'data["directDownloadURL"] = download_url' >> update_version_file.py
+        echo 'with open("illustriousorigins.version", "w") as f:' >> update_version_file.py
+        echo '    json.dump(data, f, indent="\t")' >> update_version_file.py
+        echo 'print(f"Updated illustriousorigins.version:")' >> update_version_file.py
+        echo 'print(f"  Version: {major}.{minor}.{patch}")' >> update_version_file.py
+        echo 'print(f"  Download URL: {download_url}")' >> update_version_file.py
+        python3 update_version_file.py
         cat illustriousorigins.version
         
     - name: Commit and push version file update
