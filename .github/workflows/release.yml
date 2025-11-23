@@ -29,19 +29,21 @@ jobs:
         echo "patch=$PATCH" >> $GITHUB_OUTPUT
         
     - name: Update mod_info.json with version
+      env:
+        VERSION: ${{ steps.get_version.outputs.version }}
       run: |
-        VERSION="${{ steps.get_version.outputs.version }}"
-        python3 << EOF
+        python3 << 'PYEOF'
 import json
+import os
 
-version = "${{ steps.get_version.outputs.version }}"
+version = os.environ['VERSION']
 with open('mod_info.json', 'r') as f:
     data = json.load(f)
 data['version'] = version
 with open('mod_info.json', 'w') as f:
     json.dump(data, f, indent=4)
 print(f"Updated mod_info.json version to: {version}")
-EOF
+PYEOF
         cat mod_info.json
         
     - name: Update illustriousorigins.version file
