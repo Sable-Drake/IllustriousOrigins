@@ -1,6 +1,6 @@
 # Illustrious Origins
 
-[![Version](https://img.shields.io/badge/V1.0.0-blue?style=for-the-badge)](https://github.com/Sable-Drake/IllustriousOrigins/releases/latest)
+[![Version](https://img.shields.io/github/v/release/Sable-Drake/IllustriousOrigins?style=for-the-badge&label=VERSION)](https://github.com/Sable-Drake/IllustriousOrigins/releases/latest)
 [![Download](https://img.shields.io/badge/Download-Illustrious%20Origins-blue?style=for-the-badge)](https://github.com/Sable-Drake/IllustriousOrigins/releases/latest)
 
 A mod for Starsector that adds new character backgrounds for Nexerelin with unique gameplay effects.
