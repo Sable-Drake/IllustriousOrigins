@@ -74,7 +74,7 @@ public class ForceOfPersonalityRelationNotification extends BaseIntelPlugin {
 
     @Override
     public IntelSortTier getSortTier() {
-        return IntelSortTier.TIER_4_LOCAL_UPDATE;
+        return IntelSortTier.TIER_3;
     }
 
     @Override

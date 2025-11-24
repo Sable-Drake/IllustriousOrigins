@@ -1,5 +1,5 @@
 fieldID,fieldName,fieldType,defaultValue,secondaryValue,fieldDescription,minValue,maxValue,tab
-checkIntervalDays,Check Interval (Days),Int,30,,"How often to check and improve relations (in days). Lower values check more frequently.",1,365,Force of Personality
-relationImprovementAlliance,Alliance Relation Improvement,Int,2,,"Relation improvement between alliance members per check interval (in-game relation value, where 100 = 1.0)",0,100,Force of Personality
-relationImprovementPreAlliance,Pre-Alliance Relation Improvement,Int,1,,"Relation improvement between factions with 50+ relations to player per check interval (in-game relation value, where 100 = 1.0)",0,100,Force of Personality
+checkIntervalDays,Check Interval (Days),Int,30,,How often to check and improve relations (in days). Lower values check more frequently.,1,365,Force of Personality
+relationImprovementAlliance,Alliance Relation Improvement,Int,2,,Relation improvement between alliance members per check interval,0,100,Force of Personality
+relationImprovementPreAlliance,Pre-Alliance Relation Improvement,Int,1,,Relation improvement between factions with 50+ relations to player per check interval,0,100,Force of Personality
 
